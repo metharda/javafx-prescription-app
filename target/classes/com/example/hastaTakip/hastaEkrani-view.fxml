@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="897.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hastaTakip.HastaEkraniController">
+   <children>
+      <ImageView fitHeight="890.0" fitWidth="52.0" layoutX="-1.0" layoutY="8.0" pickOnBounds="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.topAnchor="8.0">
+         <image>
+            <Image url="@bg.jpg" />
+         </image></ImageView>
+      <Button fx:id="backButton" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="27.0" text="←" />
+      <TabPane layoutX="51.0" layoutY="8.0" prefHeight="Infinity" prefWidth="Infinity" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="-51.0" AnchorPane.topAnchor="8.0">
+         <tabs>
+            <Tab text="Bilgilerim">
+               <content>
+                  <AnchorPane prefHeight="729.0" prefWidth="557.0">
+                     <children>
+                        <ImageView fitHeight="153.0" fitWidth="154.0" layoutX="380.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@avatar.png" />
+                           </image>
+                        </ImageView>
+                        <ListView fx:id="nameList" layoutX="14.0" layoutY="14.0" prefHeight="474.0" prefWidth="346.0" style="-fx-font-size: 25px;" />
+                        <Button fx:id="deleteButton" layoutX="371.0" layoutY="463.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Kaydımı Sil" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Sağlık Geçmişim">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="disease" layoutX="14.0" layoutY="74.0" prefHeight="50.0" prefWidth="555.0" />
+                        <TextArea fx:id="surgery" layoutX="14.0" layoutY="194.0" prefHeight="50.0" prefWidth="555.0" />
+                        <Text layoutX="19.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daha önce geçirilmiş ciddi hastalık var mı? Varsa neler? ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="19.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daha önce geçirilen bir ameliyat var mı? Varsa neler? ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="19.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Düzenli kullanılan bir ilaç var mı? Varsa neler?">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="medicine" layoutX="14.0" layoutY="314.0" prefHeight="50.0" prefWidth="555.0" />
+                        <Button fx:id="saveButton" layoutX="459.0" layoutY="376.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="110.0" text="Kaydet">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="history" layoutX="14.0" layoutY="434.0" prefHeight="389.0" prefWidth="555.0" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Teşhislerim">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="diagnosisView" layoutX="14.0" layoutY="14.0" prefHeight="801.0" prefWidth="577.0">
+                          <columns>
+                            <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Tarih" />
+                            <TableColumn fx:id="diagnosisColumn" prefWidth="500.0" text="Konulan Teşhis" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Reçetem">
+               <content>
+                  <AnchorPane maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="1197.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+                        <Canvas fx:id="canvas" height="681.0" layoutX="131.0" layoutY="7.0" width="1130.0" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="-64.0" AnchorPane.topAnchor="7.0" />
+                     <Button fx:id="downloadButton" layoutX="14.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="İndir" />
+                     <ComboBox fx:id="presSelect" layoutX="14.0" layoutY="27.0" prefHeight="25.0" prefWidth="112.0" />
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

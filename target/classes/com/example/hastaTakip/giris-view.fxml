@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hastaTakip.GirisController">
+  <children>
+    <Button fx:id="doctorButton" layoutX="110.0" layoutY="61.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="162.0" text="Doktor Girişi" />
+    <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="133.0" layoutY="153.0" prefHeight="21.0" prefWidth="103.0" text="T.C. Kimlik No" />
+    <Label fx:id="secondLabel" alignment="CENTER" contentDisplay="RIGHT" layoutX="133.0" layoutY="197.0" prefHeight="21.0" prefWidth="103.0" text="Soyad" />
+    <TextField fx:id="tcTextField" layoutX="253.0" layoutY="151.0" prefHeight="22.0" prefWidth="198.0" />
+    <Button fx:id="loginButton" layoutX="191.0" layoutY="255.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="218.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Giriş Yap" />
+    <Label fx:id="signupLabel" alignment="CENTER" layoutX="191.0" layoutY="302.0" prefHeight="22.0" prefWidth="217.0" text="İlk defa giriş yapıyorsanız buraya tıklayın" />
+    <PasswordField fx:id="secondField" layoutX="253.0" layoutY="195.0" prefHeight="22.0" prefWidth="198.0" />
+    <Button fx:id="patientButton" layoutX="328.0" layoutY="61.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="162.0" text="Hasta Girişi" />
+  </children>
+</AnchorPane>

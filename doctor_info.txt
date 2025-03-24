@@ -1,0 +1,6 @@
+Doktor Bilgileri:
+T.C.: 1234
+Şifre: 1234
+Ad: Mehmet
+Soyad: Şahin
+Alan: Kulak Burun Boğaz
