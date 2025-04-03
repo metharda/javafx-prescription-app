@@ -35,20 +35,10 @@ A Java-based application designed to streamline the process of generating and ma
    mvn clean install
    ```
 
-### Running the Application
-
-After building the project:
-
-1. **Navigate to the Target Directory**:
+4. **Run the Application**:
 
    ```bash
-   cd target
-   ```
-
-2. **Run the Application**:
-
-   ```bash
-   java -jar prescription-app-1.0.0.jar
+   mvn javafx:run
    ```
 
 ## Usage
